@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PsychologicalCounselingProject.Infrastructure/1.0.0": {
+        "dependencies": {
+          "PsychologicalCounselingProject.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PsychologicalCounselingProject.Infrastructure.dll": {}
+        }
+      },
+      "PsychologicalCounselingProject.Domain/1.0.0": {
+        "runtime": {
+          "PsychologicalCounselingProject.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PsychologicalCounselingProject.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PsychologicalCounselingProject.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

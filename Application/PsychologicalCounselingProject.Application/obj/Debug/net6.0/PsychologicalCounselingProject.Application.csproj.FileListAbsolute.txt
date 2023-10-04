@@ -1,0 +1,15 @@
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\bin\Debug\net6.0\PsychologicalCounselingProject.Application.deps.json
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\bin\Debug\net6.0\PsychologicalCounselingProject.Application.dll
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\bin\Debug\net6.0\PsychologicalCounselingProject.Application.pdb
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\bin\Debug\net6.0\PsychologicalCounselingProject.Domain.dll
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\bin\Debug\net6.0\PsychologicalCounselingProject.Domain.pdb
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\PsychologicalCounselingProject.Application.csproj.AssemblyReference.cache
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\PsychologicalCounselingProject.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\PsychologicalCounselingProject.Application.AssemblyInfoInputs.cache
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\PsychologicalCounselingProject.Application.AssemblyInfo.cs
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\PsychologicalCounselingProject.Application.csproj.CoreCompileInputs.cache
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\PsychologicalCounselingProject.Application.csproj.CopyComplete
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\PsychologicalCounselingProject.Application.dll
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\refint\PsychologicalCounselingProject.Application.dll
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\PsychologicalCounselingProject.Application.pdb
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Application\PsychologicalCounselingProject.Application\obj\Debug\net6.0\ref\PsychologicalCounselingProject.Application.dll
