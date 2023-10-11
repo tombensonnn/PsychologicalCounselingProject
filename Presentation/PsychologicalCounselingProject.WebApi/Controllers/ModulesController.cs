@@ -15,14 +15,10 @@ namespace PsychologicalCounselingProject.WebApi.Controllers
     [ApiController]
     public class ModulesController : ControllerBase
     {
-        IModuleReadRepository _moduleReadRepository;
-        IModuleWriteRepository _moduleWriteRepository;
         readonly IMediator _mediator;
 
-        public ModulesController(IModuleReadRepository moduleReadRepository, IModuleWriteRepository moduleWriteRepository, IMediator mediator)
+        public ModulesController(IMediator mediator)
         {
-            _moduleReadRepository = moduleReadRepository;
-            _moduleWriteRepository = moduleWriteRepository;
             _mediator = mediator;
         }
 
