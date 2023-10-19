@@ -1,4 +1,5 @@
 ﻿using PsychologicalCounselingProject.Domain.Entities;
+using PsychologicalCounselingProject.Domain.Entities.Identity;
 
 namespace PsychologicalCounselingProject.Application.DTOs.ModuleDto
 {
@@ -6,6 +7,6 @@ namespace PsychologicalCounselingProject.Application.DTOs.ModuleDto
     {
         public string Name { get; set; }
         public int QuestionSize { get; set; }
-        public User Consultant { get; set; }
+        public AppUser Consultant { get; set; }
     }
 }

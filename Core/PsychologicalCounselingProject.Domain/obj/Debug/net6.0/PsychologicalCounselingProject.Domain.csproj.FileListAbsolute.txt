@@ -9,3 +9,4 @@ C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\Psycholog
 C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net6.0\refint\PsychologicalCounselingProject.Domain.dll
 C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net6.0\PsychologicalCounselingProject.Domain.pdb
 C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net6.0\ref\PsychologicalCounselingProject.Domain.dll
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net6.0\PsychologicalCounselingProject.Domain.csproj.AssemblyReference.cache

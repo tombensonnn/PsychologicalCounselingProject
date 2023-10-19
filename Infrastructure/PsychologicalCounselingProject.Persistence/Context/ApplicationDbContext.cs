@@ -1,20 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PsychologicalCounselingProject.Domain.Entities;
 using PsychologicalCounselingProject.Domain.Entities.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PsychologicalCounselingProject.Domain.Entities.Identity;
 
 namespace PsychologicalCounselingProject.Persistence.Context
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : IdentityDbContext<AppUser, AppRole, string>
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
-        { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        {
+        }
 
-        public DbSet<User> Users { get; set; }
         public DbSet<Question> Questions { get; set; }
         public DbSet<Module> Modules { get; set; }
 

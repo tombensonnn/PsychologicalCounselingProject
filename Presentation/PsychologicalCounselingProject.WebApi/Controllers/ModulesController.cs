@@ -1,13 +1,10 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PsychologicalCounselingProject.Application.Features.Commands.Module.CreateModule;
 using PsychologicalCounselingProject.Application.Features.Commands.Module.DeleteModule;
 using PsychologicalCounselingProject.Application.Features.Commands.Module.UpdateModule;
 using PsychologicalCounselingProject.Application.Features.Queries.Module.GetAllModules;
 using PsychologicalCounselingProject.Application.Features.Queries.Module.GetModuleById;
-using PsychologicalCounselingProject.Application.Repositories.ModuleRepositories;
-using PsychologicalCounselingProject.Domain.Entities;
 
 namespace PsychologicalCounselingProject.WebApi.Controllers
 {

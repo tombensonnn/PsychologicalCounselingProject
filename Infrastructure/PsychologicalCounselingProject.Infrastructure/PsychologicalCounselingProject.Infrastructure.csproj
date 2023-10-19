@@ -1,13 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
   <ItemGroup>
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.15.1" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.15.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\PsychologicalCounselingProject.Application\PsychologicalCounselingProject.Application.csproj" />
     <ProjectReference Include="..\..\Core\PsychologicalCounselingProject.Domain\PsychologicalCounselingProject.Domain.csproj" />
   </ItemGroup>
-
 </Project>
