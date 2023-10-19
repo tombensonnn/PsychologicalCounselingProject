@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PsychologicalCounselingProj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PsychologicalCounselingProject.WebApi", "Presentation\PsychologicalCounselingProject.WebApi\PsychologicalCounselingProject.WebApi.csproj", "{22C1AAB4-E377-442B-9BF8-1A7A10725F08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PsychologicalCounselingProject.Application", "Application\PsychologicalCounselingProject.Application\PsychologicalCounselingProject.Application.csproj", "{A08805DD-36FD-4810-840B-9539B7DB75F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PsychologicalCounselingProject.Application", "Application\PsychologicalCounselingProject.Application\PsychologicalCounselingProject.Application.csproj", "{A08805DD-36FD-4810-840B-9539B7DB75F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

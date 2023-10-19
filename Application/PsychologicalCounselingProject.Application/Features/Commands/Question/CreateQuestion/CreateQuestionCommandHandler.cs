@@ -1,7 +1,6 @@
 ﻿using MediatR;
 using PsychologicalCounselingProject.Application.Repositories.ModuleRepositories;
 using PsychologicalCounselingProject.Application.Repositories.QuestionRepositories;
-using PsychologicalCounselingProject.Application.Repositories.UserRepositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

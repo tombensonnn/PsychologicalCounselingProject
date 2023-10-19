@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PsychologicalCounselingProject.Application.Features.Commands.Question.CreateQuestion;
@@ -11,6 +12,7 @@ namespace PsychologicalCounselingProject.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = "Admin")]
     public class QuestionsController : ControllerBase
     {
         public IMediator _mediator { get; set; }

@@ -1,0 +1,12 @@
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\bin\Debug\net7.0\PsychologicalCounselingProject.Domain.deps.json
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\bin\Debug\net7.0\PsychologicalCounselingProject.Domain.dll
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\bin\Debug\net7.0\PsychologicalCounselingProject.Domain.pdb
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\PsychologicalCounselingProject.Domain.csproj.AssemblyReference.cache
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\PsychologicalCounselingProject.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\PsychologicalCounselingProject.Domain.AssemblyInfoInputs.cache
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\PsychologicalCounselingProject.Domain.AssemblyInfo.cs
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\PsychologicalCounselingProject.Domain.csproj.CoreCompileInputs.cache
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\PsychologicalCounselingProject.Domain.dll
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\refint\PsychologicalCounselingProject.Domain.dll
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\PsychologicalCounselingProject.Domain.pdb
+C:\Users\tunah\OneDrive\Masaüstü\PsychologicalCounselingProject\Core\PsychologicalCounselingProject.Domain\obj\Debug\net7.0\ref\PsychologicalCounselingProject.Domain.dll
