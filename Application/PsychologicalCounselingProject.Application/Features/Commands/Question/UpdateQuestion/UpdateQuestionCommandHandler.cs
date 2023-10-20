@@ -24,7 +24,6 @@ namespace PsychologicalCounselingProject.Application.Features.Commands.Question.
         {
             var updatedQuestion = await _questionReadRepository.GetByIdAsync(request.QuestionId);
             updatedQuestion.Title = request.Title;
-            updatedQuestion.Answer = request.Answer;
             await _questionWriteRepository.SaveChangesAsync();
 
             return new() { Question = updatedQuestion};

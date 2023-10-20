@@ -1,10 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using PsychologicalCounselingProject.Application.Repositories.AnswerRepositories;
 using PsychologicalCounselingProject.Application.Repositories.ModuleRepositories;
 using PsychologicalCounselingProject.Application.Repositories.QuestionRepositories;
 using PsychologicalCounselingProject.Domain.Entities.Identity;
 using PsychologicalCounselingProject.Persistence.Configurations;
 using PsychologicalCounselingProject.Persistence.Context;
+using PsychologicalCounselingProject.Persistence.Repository.AnswerRepositories;
 using PsychologicalCounselingProject.Persistence.Repository.ModuleRepositories;
 using PsychologicalCounselingProject.Persistence.Repository.QuestionRepositories;
 
@@ -24,6 +26,8 @@ namespace PsychologicalCounselingProject.Persistence
                 options.Password.RequireUppercase = false;
             }).AddEntityFrameworkStores<ApplicationDbContext>();
 
+            services.AddScoped<IAnswerReadRepository, AnswerReadRepository>();
+            services.AddScoped<IAnswerWriteRepository, AnswerWriteRepository>();
             services.AddScoped<IModuleReadRepository, ModuleReadRepository>();
             services.AddScoped<IModuleWriteRepository, ModuleWriteRepository>();
             services.AddScoped<IQuestionReadRepository, QuestionReadRepository>();
