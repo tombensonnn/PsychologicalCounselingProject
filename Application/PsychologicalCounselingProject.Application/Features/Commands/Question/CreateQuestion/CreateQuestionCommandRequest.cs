@@ -5,7 +5,6 @@ namespace PsychologicalCounselingProject.Application.Features.Commands.Question.
     public class CreateQuestionCommandRequest : IRequest<CreateQuestionCommandResponse>
     {
         public string Title { get; set; }
-        public string Answer { get; set; }
         public string ModuleId { get; set; }
     }
 }

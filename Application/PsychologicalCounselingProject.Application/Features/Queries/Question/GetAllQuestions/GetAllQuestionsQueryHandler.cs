@@ -19,7 +19,7 @@ namespace PsychologicalCounselingProject.Application.Features.Queries.Question.G
 
         public async Task<GetAllQuestionsQueryResponse> Handle(GetAllQuestionsQueryRequest request, CancellationToken cancellationToken)
         {
-            var questions = _questionReadRepository.GetAll(false).Skip(request.Page * request.Size).Take(request.Size).Select(p => new { p.Title, p.Answer }).ToList();
+            var questions = _questionReadRepository.GetAll(false).Skip(request.Page * request.Size).Take(request.Size).Select(p => new { p.Title }).ToList();
 
             return new() { Questions = questions };
         }

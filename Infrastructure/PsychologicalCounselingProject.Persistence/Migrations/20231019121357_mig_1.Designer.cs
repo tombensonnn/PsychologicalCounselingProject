@@ -12,8 +12,8 @@ using PsychologicalCounselingProject.Persistence.Context;
 namespace PsychologicalCounselingProject.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20231019111959_mig_2")]
-    partial class mig_2
+    [Migration("20231019121357_mig_1")]
+    partial class mig_1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -129,6 +129,37 @@ namespace PsychologicalCounselingProject.Persistence.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("PsychologicalCounselingProject.Domain.Entities.Answer", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("UpdatedDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("QuestionId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Answers");
                 });
 
             modelBuilder.Entity("PsychologicalCounselingProject.Domain.Entities.Identity.AppRole", b =>
@@ -260,10 +291,6 @@ namespace PsychologicalCounselingProject.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
-                    b.Property<string>("Answer")
-                        .IsRequired()
-                        .HasColumnType("text");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -335,6 +362,23 @@ namespace PsychologicalCounselingProject.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("PsychologicalCounselingProject.Domain.Entities.Answer", b =>
+                {
+                    b.HasOne("PsychologicalCounselingProject.Domain.Entities.Question", "Question")
+                        .WithMany("Answers")
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PsychologicalCounselingProject.Domain.Entities.Identity.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Question");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("PsychologicalCounselingProject.Domain.Entities.Module", b =>
                 {
                     b.HasOne("PsychologicalCounselingProject.Domain.Entities.Identity.AppUser", "Consultant")
@@ -358,6 +402,11 @@ namespace PsychologicalCounselingProject.Persistence.Migrations
             modelBuilder.Entity("PsychologicalCounselingProject.Domain.Entities.Module", b =>
                 {
                     b.Navigation("Questions");
+                });
+
+            modelBuilder.Entity("PsychologicalCounselingProject.Domain.Entities.Question", b =>
+                {
+                    b.Navigation("Answers");
                 });
 #pragma warning restore 612, 618
         }
