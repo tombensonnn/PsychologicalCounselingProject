@@ -20,7 +20,7 @@ namespace PsychologicalCounselingProject.Infrastructure.Security
             _configuration = configuration;
         }
 
-        public Token CreateAccessToken(int hours)
+        public Token CreateAccessToken(int seconds)
         {
             Token token = new();
 
@@ -28,7 +28,7 @@ namespace PsychologicalCounselingProject.Infrastructure.Security
 
             SigningCredentials credentials = new(securityKey, SecurityAlgorithms.HmacSha256);
 
-            token.Expiration = DateTime.UtcNow.AddHours(hours);
+            token.Expiration = DateTime.UtcNow.AddSeconds(seconds);
 
             JwtSecurityToken securityToken = new(
                 audience: _configuration["Token:Audience"],
