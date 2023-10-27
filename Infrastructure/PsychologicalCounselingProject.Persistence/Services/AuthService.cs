@@ -4,7 +4,9 @@ using Microsoft.Extensions.Configuration;
 using PsychologicalCounselingProject.Application.Abstraction.Security;
 using PsychologicalCounselingProject.Application.Abstraction.Services;
 using PsychologicalCounselingProject.Application.DTOs.Security;
+using PsychologicalCounselingProject.Application.DTOs.User.Facebook;
 using PsychologicalCounselingProject.Domain.Entities.Identity;
+using System.Text.Json;
 
 namespace PsychologicalCounselingProject.Persistence.Services
 {
@@ -14,13 +16,15 @@ namespace PsychologicalCounselingProject.Persistence.Services
         readonly SignInManager<AppUser> _signInManager;
         readonly ITokenHandler _tokenHandler;
         readonly IConfiguration _configuration;
+        readonly HttpClient _httpClient; 
 
-        public AuthService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenHandler tokenHandler, IConfiguration configuration)
+        public AuthService(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, ITokenHandler tokenHandler, IConfiguration configuration, IHttpClientFactory httpClientFactory)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _tokenHandler = tokenHandler;
             _configuration = configuration;
+            _httpClient = httpClientFactory.CreateClient();
         }
 
         async Task<Token> CreateUserExternalAsync(AppUser? user, string email, string name, UserLoginInfo info, int accessTokenLifeTime)
@@ -93,9 +97,30 @@ namespace PsychologicalCounselingProject.Persistence.Services
                 return null;
         }
 
-        public Task<Token> FacebookLoginAsync(string accessToken, int accessTokenLifetime)
+        public async Task<Token> FacebookLoginAsync(string authToken, int accessTokenLifetime)
         {
-            throw new NotImplementedException();
+            string accessTokenResponse = await _httpClient.GetStringAsync($"https://graph.facebook.com/oauth/access_token?client_id={_configuration["Authentication:Facebook:AppId"]}&client_secret={_configuration["Authentication:Facebook:AppSecret"]}&grant_type=client_credentials");
+
+            FacebookAccessTokenResponse facebookAccessTokenResponse = JsonSerializer.Deserialize<FacebookAccessTokenResponse>(accessTokenResponse);
+
+            string userAccessTokenValidation = await _httpClient.GetStringAsync($"https://graph.facebook.com/debug_token?input_token={authToken}&access_token={facebookAccessTokenResponse.AccessToken}");
+
+            FacebookUserAccessTokenValidationDto validation = JsonSerializer.Deserialize<FacebookUserAccessTokenValidationDto>(userAccessTokenValidation);
+
+            if (validation.Data.IsValıd)
+            {
+                string userInfoResponse = await _httpClient.GetStringAsync($"https://graph.facebook.com/me?fields=email,name&access_token={authToken}");
+
+                FacebookUserInfoResponse userInfo = JsonSerializer.Deserialize<FacebookUserInfoResponse>(userInfoResponse);
+
+                var info = new UserLoginInfo("FACEBOOK", validation.Data.UserId, "FACEBOOK");
+
+                AppUser user = await _userManager.FindByLoginAsync(info.LoginProvider, info.ProviderKey);
+
+                return await CreateUserExternalAsync(user, userInfo.Email, userInfo.Name, info, accessTokenLifetime);
+            }
+
+            throw new Exception("Something went wrong");
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PsychologicalCounselingProject.Application.Features.Commands.User.FacebookLogin;
 using PsychologicalCounselingProject.Application.Features.Commands.User.GoogleLogin;
 using PsychologicalCounselingProject.Application.Features.Commands.User.LoginUser;
 
@@ -28,6 +29,13 @@ namespace PsychologicalCounselingProject.WebApi.Controllers
         public async Task<IActionResult> GoogleLogin(GoogleLoginCommandRequest googleLoginCommandRequest)
         {
             GoogleLoginCommandResponse response = await _mediator.Send(googleLoginCommandRequest);
+            return Ok(response);
+        }
+
+        [HttpPost("facebook-login")]
+        public async Task<IActionResult> FacebookLogin(FacebookLoginCommandRequest facebookLoginCommandRequest)
+        {
+            FacebookLoginCommandResponse response = await _mediator.Send(facebookLoginCommandRequest);
             return Ok(response);
         }
     }

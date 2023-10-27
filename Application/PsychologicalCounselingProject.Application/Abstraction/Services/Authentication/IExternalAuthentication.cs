@@ -5,6 +5,6 @@ namespace PsychologicalCounselingProject.Application.Abstraction.Services.Authen
     public interface IExternalAuthentication
     {
         Task<Token> GoogleLoginAsync(string idToken, int accessTokenLifetime);
-        Task<Token> FacebookLoginAsync(string accessToken, int accessTokenLifetime);
+        Task<Token> FacebookLoginAsync(string authToken, int accessTokenLifetime);
     }
 }
