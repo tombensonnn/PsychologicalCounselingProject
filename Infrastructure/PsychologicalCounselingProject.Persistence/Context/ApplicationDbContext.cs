@@ -14,6 +14,7 @@ namespace PsychologicalCounselingProject.Persistence.Context
 
         public DbSet<Question> Questions { get; set; }
         public DbSet<Module> Modules { get; set; }
+        public DbSet<Answer> Answers { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {

@@ -9,6 +9,6 @@ namespace PsychologicalCounselingProject.Application.Abstraction.Security
 {
     public interface ITokenHandler
     {
-        Token CreateAccessToken(int hours);
+        Token CreateAccessToken(int seconds);
     }
 }
