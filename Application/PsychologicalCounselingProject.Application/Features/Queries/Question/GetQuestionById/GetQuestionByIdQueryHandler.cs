@@ -15,7 +15,7 @@ namespace PsychologicalCounselingProject.Application.Features.Queries.Question.G
         public async Task<GetQuestionByIdQueryResponse> Handle(GetQuestionByIdQueryRequest request, CancellationToken cancellationToken)
         {
             var question = await _questionReadRepository.GetByIdAsync(request.Id, false);
-            return new() { Answer = question.Answer, Title = question.Title };
+            return new() { Title = question.Title };
         }
     }
 }

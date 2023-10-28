@@ -23,7 +23,7 @@ namespace PsychologicalCounselingProject.Application.Features.Commands.Question.
         public async Task<CreateQuestionCommandResponse> Handle(CreateQuestionCommandRequest request, CancellationToken cancellationToken)
         {
             var module = await _moduleReadRepository.GetByIdAsync(request.ModuleId);
-            var createdQuestion = await _questionWriteRepository.AddAsync(new() { Title = request.Title, Answer = request.Answer, Module = module });
+            var createdQuestion = await _questionWriteRepository.AddAsync(new() { Title = request.Title, Module = module, Answers = null });
             await _questionWriteRepository.SaveChangesAsync();
 
             return new() { Result = createdQuestion };
